@@ -14,12 +14,12 @@ public class HomePageSteps {
         this.homePage = new HomePage();
     }
 
-    @Given("^A user navigates to HomePage \"([^\"]*)\"$")
-    public void aUserNavigatesToHomePage(String country) {
-        this.homePage.goToHomePage(country);
+    @Given("^A user navigates to HomePage$")
+    public void aUserNavigatesToHomePage() {
+        this.homePage.goToHomePage();
     }
 
-    @Then("^Google logo is displayed$")
+    @Then("^Booking logo is displayed$")
     public void googleLogoIsDisplayed() {
         this.homePage.checkLogoDisplay();
     }

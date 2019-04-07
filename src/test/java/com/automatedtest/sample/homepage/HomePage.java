@@ -10,12 +10,12 @@ import org.openqa.selenium.support.PageFactory;
 
 public class HomePage extends BasePage{
 
-    private static final String HOME_PAGE_URL = "https://www.google.";
+    private static final String HOME_PAGE_URL = "https://www.booking.com";
 
-    @FindBy(css = "#hplogo")
+    @FindBy(id = "logo_no_globe_new_logo")
     private WebElement logo;
 
-    @FindBy(css = "input[name=q]")
+    @FindBy(className = "sb-destination__input")
     private WebElement searchInput;
 
 
@@ -23,8 +23,8 @@ public class HomePage extends BasePage{
         PageFactory.initElements(driver, this);
     }
 
-    void goToHomePage(String country){
-        driver.get(HOME_PAGE_URL + country);
+    void goToHomePage(){
+        driver.get(HOME_PAGE_URL);
         wait.forLoading(5);
     }
 
@@ -35,7 +35,7 @@ public class HomePage extends BasePage{
     void checkTitle(String title) {
         String displayedTitle = driver.getTitle();
         Assert.assertTrue("Displayed title is " + displayedTitle + " instead of " + title,
-                title.equals(displayedTitle));
+                displayedTitle.contains(title));
     }
 
     void checkSearchBarDisplay() {

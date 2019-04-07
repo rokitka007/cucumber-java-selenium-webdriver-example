@@ -3,8 +3,8 @@ Feature: Home page
 
   @home_page @home_page_display
   Scenario Outline: Check page display (uid:8701b6da-ae8f-40b2-a6ba-e4da58f83954)
-    Given A user navigates to HomePage "<countryCode>"
-    Then Google logo is displayed
+    Given A user navigates to HomePage
+    Then Booking logo is displayed
     And search bar is displayed
 
     Examples:
@@ -14,5 +14,5 @@ Feature: Home page
 
   @home_page @home_page_title
   Scenario: Check title (uid:4e9e6380-bffd-482d-9c6f-f4dd7b960398)
-    Given A user navigates to HomePage "fr"
-    Then page title is "Google"
+    Given A user navigates to HomePage
+    Then page title is "Booking.com"

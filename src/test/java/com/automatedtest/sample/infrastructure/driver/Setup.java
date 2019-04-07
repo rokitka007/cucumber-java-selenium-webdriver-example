@@ -9,6 +9,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class Setup {
 
     public static WebDriver driver;
+    private static String chromePath = "" +
+            "src/webdriver/chromedriver.exe";
 
     @Before
     public void setWebDriver() throws Exception {
@@ -19,6 +21,7 @@ public class Setup {
         }
         switch (browser) {
             case "chrome":
+                System.setProperty("webdriver.chrome.driver", chromePath);
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("start-maximized");
                 driver = new ChromeDriver(chromeOptions);
