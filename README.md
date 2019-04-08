@@ -29,13 +29,3 @@ $ mvn test
 By default, tests will run on Chrome. To change that, specify `-Dbrowser={browser}` where `{browser}` is either `chrome` or `firefox`
 
 You can also select specific scenarios to execute using `-Dcucumber.options="--tags @your_tag"`. More info about tags and how to combine them [here](https://github.com/cucumber/cucumber/tree/master/tag-expressions).
-
-## Hiptest ##
-
-Feature files can be handled with Hiptest, a test management platform. To get started with Hiptest, 
-go [here](https://hiptest.com/start/tutorials/getting-started-with-behavior-driven-development/). Features files in 
-this project were exported directly from an [Hiptest project](https://app.hiptest.com/projects/102008) using 
-[Hiptest publisher](https://github.com/hiptest/hiptest-publisher). Credentials to access the project are the following.
-
-- _login:_ automated-tests@lumiererouge.net
-- _password:_ Eth7S9#
