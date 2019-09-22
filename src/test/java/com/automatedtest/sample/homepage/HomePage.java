@@ -18,7 +18,6 @@ public class HomePage extends BasePage{
     @FindBy(className = "sb-destination__input")
     private WebElement searchInput;
 
-
     HomePage() {
         PageFactory.initElements(driver, this);
     }

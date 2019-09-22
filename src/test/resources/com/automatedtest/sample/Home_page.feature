@@ -1,6 +1,5 @@
 Feature: Home page
 
-
   @home_page @home_page_display
   Scenario Outline: Check page display (uid:8701b6da-ae8f-40b2-a6ba-e4da58f83954)
     Given A user navigates to HomePage
